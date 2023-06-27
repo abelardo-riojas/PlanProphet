@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Answer</title>
+</head>
+<body>
+    <h1>Answer</h1>
+    
+    <h3>Question:</h3>
+    <p>{{ question }}</p>
+    
+    <h3>Answer:</h3>
+    <ul>
+    {% for element in answer %}
+        <li>{{ element }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Context:</h3>
+    <p>{{ context }}</p>
+    
+    <p><a href="/questions">Ask another question</a></p>
+</body>
+</html>

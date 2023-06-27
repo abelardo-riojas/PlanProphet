@@ -1,0 +1,27 @@
+<!-- upload.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <h2 style="text-align: center;" class="center">
+        <img src="{{ url_for('static', filename='plan_prophet.png') }}" alt="Plan Prophet" style="height: 1em; margin-right: 0.3em;">
+        PlanProphet
+    </h2>
+    <h4 style="text-align:center;">An artificially intelligent helper for Standard Plan Documents</h4>
+</head>
+<body>
+<div style="text-align: center">
+    <h3>Upload an SPD PDF!</h3>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdf" accept=".pdf">
+        <input type="submit" value="Upload">
+    </form>
+</div>
+</body>
+</html>

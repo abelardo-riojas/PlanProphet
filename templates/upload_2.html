@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload PDF</title>
+
+    <script type="text/javascript">
+        // Event listener for SSE messages
+        var source = new EventSource("/");
+
+        source.onmessage = function(event) {
+            var message = document.createElement("p");
+            message.innerHTML = event.data;
+            document.getElementById("progress").appendChild(message);
+        };
+    </script>
+</head>
+<body>
+    <h1>Upload PDF</h1>
+        <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdf" accept=".pdf">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

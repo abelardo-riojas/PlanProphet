@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Default Answers</title>
+</head>
+<body>
+    <h1>Default Answers</h1>
+    
+    {% for question, answer, context in zip(questions, answers, contexts) %}
+        <h2>Question: {{ question }}</h2>
+        <p>Answer: {{ answer }}</p>
+        <p>Context: {{ context }}</p>
+        <hr>
+    {% endfor %}
+    
+</body>
+</html>
