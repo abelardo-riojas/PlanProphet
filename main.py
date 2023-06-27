@@ -79,8 +79,6 @@ def answer_question(question):
     #send the prompt and question to openai
     answer = generate_response(prompt, question)
 
-    #huzzah! we have an answer
-    #answer = response['choices'][0]['message']["content"]
     print('done')
     return answer, contexts
 
